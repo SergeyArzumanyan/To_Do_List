@@ -17,11 +17,12 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy production to Netlify
-        uses: South-Paw/action-netlify-deploy@v1.2.0
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2.3
         with:
+          publish-dir: ./build
+          production-branch: main
+          deploy-message: Deployed from GitHub Actions
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          netlify-auth-token: ${{ secrets.NETLIFY_ACCESS_TOKEN }}
           netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
-          build-dir: './dist'
-          comment-on-commit: true
+          netlify-access-token: ${{ secrets.NETLIFY_ACCESS_TOKEN }}
