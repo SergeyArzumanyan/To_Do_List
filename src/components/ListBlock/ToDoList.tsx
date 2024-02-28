@@ -16,7 +16,7 @@ export const ToDoList = () => {
         ToDos;
 
     return (
-        <ToDosWrapper>
+        <ToDosWrapper className='poxos'>
             { FilteredToDos.map(item =>
                 <ToDoItem key={ item.Id }
                           ToDoItem={ item }
@@ -27,8 +27,32 @@ export const ToDoList = () => {
 };
 
 const ToDosWrapper = styled.div`
-    max-width: 300px;
+    width: 60%;
+    max-height: 62dvh;
+    margin: 20px auto;
+    padding: 0 6px;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    
+    @media (max-width: 768px) {
+        width: 100%;
+        max-height: 70dvh;
+    }
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: #509151;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #0e130c;
+        border-radius: 10px;
+    }
 `;

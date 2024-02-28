@@ -11,12 +11,31 @@
   color: rgba(255, 255, 255, 0.87);
 }
 
+body {
+  height: 100dvh;
+  background: rgb(37, 147, 30);
+  background: -moz-linear-gradient(30deg, #193325, #509151);
+  background: -webkit-linear-gradient(30deg, #193325, #509151);
+  background: linear-gradient(30deg, #193325, #509151);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #509151;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0e130c;
+}
+
 /* Modal Styles */
 .ReactModal__Overlay {
   background-color: rgba(84, 84, 84, 0.3) !important;
 }
 
 .ReactModal__Content {
+  width: 30vw;
+  height: 35dvh;
   border-radius: 8px !important;
   inset: initial !important;
   top: 50% !important;
@@ -25,4 +44,9 @@
   background-color: rgba(44, 44, 44) !important;
   border: none !important;
   outline: none !important;
+
+  @media (max-width: 768px) {
+    width: 80vw;
+    height: 25dvh;
+  }
 }

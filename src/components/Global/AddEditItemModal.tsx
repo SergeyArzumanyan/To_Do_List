@@ -66,13 +66,16 @@ export const AddEditItemModal = () => {
 };
 
 const ModalContentWrapper = styled.div`
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 16px;
 `;
 
 const TextInput = styled.textarea`
     width: 100%;
+    height: 100%;
     font-size: 12px;
     padding: 10px;
     padding-inline-end: 10px;
