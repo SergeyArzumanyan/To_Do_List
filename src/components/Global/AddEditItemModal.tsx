@@ -49,7 +49,9 @@ export const AddEditItemModal = () => {
     return (
         <Modal isOpen={ IsOpen } onRequestClose={ onClose }>
             <ModalContentWrapper>
-                <h2 className='text-lg text-center'>Add Item</h2>
+                <h2 className='text-lg text-center'>
+                    { EditModeItem ? 'Edit Item' : 'Add Item' }
+                </h2>
                 <TextInput placeholder='Type here'
                            value={ content }
                            onChange={ handleInputChange }
