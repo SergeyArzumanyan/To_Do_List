@@ -1,14 +1,14 @@
+import { useDispatch } from "react-redux";
+
 import styled from "styled-components";
 
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
-import Input from "./Input.tsx";
-import RoundButton from "../Global/RoundButton.tsx";
-import { useDispatch } from "react-redux";
-import { toggleModal } from "../../States/actions.ts";
+import { toggleModal } from "@Redux/actions";
+import { Input } from "@Components/SearchAddBlock";
+import { RoundButton } from "@Components/Global";
 
-
-const ListActions = () => {
+export const ListActions = () => {
     const dispatch = useDispatch();
 
     const openAddModal = () => {
@@ -34,5 +34,3 @@ const ActionsWrapper = styled.div`
     align-items: center;
     gap: 0.6rem;
 `;
-
-export default ListActions;

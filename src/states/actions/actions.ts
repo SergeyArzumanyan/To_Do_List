@@ -1,6 +1,8 @@
 import { createAction } from '@reduxjs/toolkit';
-import { IToDoItem } from "../interfaces/ToDoItem.interface.ts";
-import { IAddEditModal } from "../interfaces/AddEditModal.interface.ts";
+
+import { IAddEditModal } from "@Interfaces/AddEditModal.interface.ts";
+import { IToDoItem } from "@Interfaces/ToDoItem.interface.ts";
+
 
 export const toggleModal = createAction<IAddEditModal>('TOGGLE_MODAL');
 export const addItem = createAction<IToDoItem>('ADD_ITEM');

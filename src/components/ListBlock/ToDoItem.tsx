@@ -1,15 +1,17 @@
+import { useDispatch } from "react-redux";
+
 import styled from "styled-components";
 import { faPencil, faTrash } from "@fortawesome/free-solid-svg-icons";
-import RoundButton from "../Global/RoundButton.tsx";
-import { IToDoItem } from "../../interfaces/ToDoItem.interface.ts";
-import { useDispatch } from "react-redux";
-import { deleteItem, toggleItemAsDone, toggleModal } from "../../States/actions.ts";
+
+import { deleteItem, toggleItemAsDone, toggleModal } from "@Redux/actions";
+import { IToDoItem } from "@Interfaces/ToDoItem.interface";
+import { RoundButton } from "@Components/Global";
 
 interface ToDoItemProps {
     ToDoItem: IToDoItem;
 }
 
-const ToDoItem = ({ ToDoItem }: ToDoItemProps) => {
+export const ToDoItem = ({ ToDoItem }: ToDoItemProps) => {
     const dispatch = useDispatch();
 
     const DeleteItem = () => {
@@ -78,5 +80,3 @@ const ButtonsWrapper = styled.div`
     align-items: center;
     gap: 6px;
 `;
-
-export default ToDoItem;

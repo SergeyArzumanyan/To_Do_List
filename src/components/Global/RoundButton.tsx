@@ -11,7 +11,7 @@ interface RoundButtonProps {
     BgColor?: string;
     OnClick?: (...args) => void;
 }
-const RoundButton = ({ Icon, Width, Height, FontSize, BgColor, OnClick }: RoundButtonProps) => {
+export const RoundButton = ({ Icon, Width, Height, FontSize, BgColor, OnClick }: RoundButtonProps) => {
     return (
         <RoundBtn className='text-sm'
                   type='button'
@@ -40,5 +40,3 @@ const RoundBtn = styled.button`
         box-shadow: 0 0 0 1px #55b95c;
     }
 `;
-
-export default RoundButton;

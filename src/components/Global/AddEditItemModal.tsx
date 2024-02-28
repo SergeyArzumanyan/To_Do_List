@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Modal from 'react-modal';
 
-import { addItem, editItem, toggleModal } from '../../States/actions';
 import styled from "styled-components";
-import { RootState } from "../../States/store.ts";
 
+import { RootState } from "@Redux/store";
+import { addItem, editItem, toggleModal } from '@Redux/actions';
+import { IToDoItem } from "@Interfaces/ToDoItem.interface";
 
-const AddEditItemModal = () => {
+export const AddEditItemModal = () => {
     const IsOpen = useSelector((state: RootState) => state.ToDos.IsModalOpened);
     const EditModeItem = useSelector((state: RootState) => state.ToDos.CurrentItem);
     const dispatch = useDispatch();
@@ -124,5 +125,3 @@ const ModalBtn = styled.button`
         box-shadow: 0 0 0 1px #55b95c;
     }
 `;
-
-export default AddEditItemModal;

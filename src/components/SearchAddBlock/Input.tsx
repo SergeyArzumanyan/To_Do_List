@@ -1,12 +1,14 @@
-import styled from "styled-components";
 import { useDispatch } from "react-redux";
-import { setSearchInput } from "../../States/actions.ts";
+
+import styled from "styled-components";
+
+import { setSearchInput } from "@Redux/actions";
 
 interface InputProps {
     Placeholder: string;
 }
 
-const Input = ({ Placeholder }: InputProps) => {
+export const Input = ({ Placeholder }: InputProps) => {
     const dispatch = useDispatch();
     const SearchToDos = (e) => {
         dispatch(setSearchInput(e.target.value));
@@ -34,5 +36,3 @@ const TextInput = styled.input`
         box-shadow: 0 0 0 2px #464646;
     }
 `;
-
-export default Input;

@@ -6,8 +6,9 @@ import {
     setSearchInput,
     toggleItemAsDone,
     toggleModal,
-} from './actions';
-import { IToDoItem } from "../interfaces/ToDoItem.interface.ts";
+} from '../actions/actions.ts';
+
+import { IToDoItem } from "@Interfaces/ToDoItem.interface.ts";
 
 interface TodosState {
     toDoItems: IToDoItem[];

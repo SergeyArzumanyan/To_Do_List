@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 
-import ToDoItem from "./ToDoItem.tsx";
-import { RootState } from "../../States/store.ts";
-import { IToDoItem } from "../../interfaces/ToDoItem.interface.ts";
+import { RootState } from "@Redux/store";
+import { ToDoItem } from "@Components/ListBlock";
+import { IToDoItem } from "@Interfaces/ToDoItem.interface";
 
-const ToDoList = () => {
+export const ToDoList = () => {
     const ToDos: IToDoItem[] = useSelector((state: RootState) => state.ToDos.toDoItems);
     const SearchInput: string = useSelector((state: RootState) => state.ToDos.SearchInput);
 
@@ -32,5 +32,3 @@ const ToDosWrapper = styled.div`
     flex-direction: column;
     gap: 8px;
 `;
-
-export default ToDoList;
