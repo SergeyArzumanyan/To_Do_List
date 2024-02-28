@@ -7,12 +7,22 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light;
+  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Modal Styles */
+.ReactModal__Overlay {
+  background-color: rgba(84, 84, 84, 0.3) !important;
+}
+
+.ReactModal__Content {
+  border-radius: 8px !important;
+  inset: initial !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  background-color: rgba(44, 44, 44) !important;
+  border: none !important;
+  outline: none !important;
 }
